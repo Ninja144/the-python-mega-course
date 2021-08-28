@@ -23,3 +23,11 @@ print()
 df5 = pandas.read_csv('./supermarkets/supermarkets-semi-colons.txt', sep=';')
 print(df5)
 print()
+
+df6 = pandas.read_csv('./supermarkets/supermarkets-semi-colons.txt', sep=';', header=None)
+print(df6)
+print()
+
+df6.columns = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
+print(df6)
+print()
