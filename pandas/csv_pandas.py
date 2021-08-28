@@ -35,3 +35,6 @@ print()
 df6.set_index("one", inplace=True)
 print(df6)
 print()
+
+df6.loc['2':'3']
+print(df6)
