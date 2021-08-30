@@ -11,7 +11,7 @@ map = folium.Map(location=[37.95182453166775, -114.50700991660084], zoom_start=5
 fg = folium.FeatureGroup(name="My Map")
 
 for lt, ln, el in zip(lat, lon, elev):
-    fg.add_child(folium.Marker(location=[lt, ln], popup=el, icon=folium.Icon(color='green')))
+    fg.add_child(folium.Marker(location=[lt, ln], popup=str(el) + " m", icon=folium.Icon(color='green')))
 
 map.add_child(fg)
 
