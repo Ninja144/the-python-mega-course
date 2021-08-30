@@ -1,7 +1,10 @@
 import folium
 
-map = folium.Map(location=[54.72105836758883, 20.493974315870876], zoom_start=20, tiles='Stamen Terrain')
+map = folium.Map(location=[54.72109254419616, 20.494004804299397], zoom_start=15, tiles='Stamen Terrain')
 
-map.add_child(folium.Marker(location=[54.7, 20.4], popup="Hi I am a Marker", icon=folium.Icon(color='green')))
+fg = folium.FeatureGroup(name="My Map")
+fg.add_child(folium.Marker(location=[54.72109254419616, 20.494004804299397], popup='Шарага', icon=folium.Icon(color='red')))
+
+map.add_child(fg)
 
 map.save("Map1.html")
